@@ -15,7 +15,6 @@ pipeline {
         stage("test") {
             steps {
                 echo 'testing step'
-                echo "branch name is ${env.BRANCH_NAME}"
             }
         }
         stage("deploy") {
