@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         AMAZON_SECRET = credentials('amazon_secret')
+        AMAZON_CRED = credentials('amazon_cred')
     }
     
     stages {
@@ -15,6 +16,8 @@ pipeline {
         stage("test") {
             steps {
                 echo 'testing step'
+                echo "user is ${AMAZON_SECRET_USR}"
+                echo "pwd is ${AMAZON_SECRET_PSW}"
             }
         }
         stage("deploy") {
