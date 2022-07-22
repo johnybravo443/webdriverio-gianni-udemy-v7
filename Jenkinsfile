@@ -10,7 +10,6 @@ pipeline {
             steps {
                 echo 'building step'
                 echo "secret is ${AMAZON_SECRET}"
-                echo ${AMAZON_SECRET}
             }
         }
         stage("test") {
