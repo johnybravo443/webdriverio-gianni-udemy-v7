@@ -8,6 +8,11 @@ pipeline {
             }
         }
         stage("test") {
+            when {
+                expression {
+                    BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 echo 'testing step'
                 echo "branch name is ${env.BRANCH_NAME}"
