@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# System Files
+.DS_Store
+
+# IDEs and editors
+/.idea
+
+# automation folderes
+allure-report/
+allure-results/
