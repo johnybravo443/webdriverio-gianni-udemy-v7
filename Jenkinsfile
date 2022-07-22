@@ -2,14 +2,14 @@ pipeline {
     agent any
     
     environment {
-        AMAZON_CRED = credentials('amazon_cred')
+        AMAZON_SECRET = credentials('amazon_secret')
     }
     
     stages {
         stage("build") {
             steps {
                 echo 'building step'
-                echo "branch name is ${AMAZON_CRED}"
+                echo "secret is ${AMAZON_SECRET}"
             }
         }
         stage("test") {
