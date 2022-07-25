@@ -15,6 +15,12 @@ pipeline {
         }
         stage("test") {
             steps {
+                withCredentials([
+                    usernamePassword(credentials: 'amazon_cred', usernameVariable: 'USER', passwordVariable: 'PWD')
+                ]) {
+                    echo "username is ${USER}"
+                    echo "password is ${PWD}"
+                }
                 echo 'testing step'
                 echo "user is ${AMAZON_CRED_USR}"
                 echo "pwd is ${AMAZON_CRED_PSW}"
