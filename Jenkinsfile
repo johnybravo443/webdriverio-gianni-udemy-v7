@@ -16,8 +16,8 @@ pipeline {
         stage("test") {
             steps {
                 echo 'testing step'
-                echo "user is ${AMAZON_SECRET_USR}"
-                echo "pwd is ${AMAZON_SECRET_PSW}"
+                echo "user is ${AMAZON_CRED_USR}"
+                echo "pwd is ${AMAZON_CRED_PSW}"
             }
         }
         stage("deploy") {
